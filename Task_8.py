@@ -2,14 +2,15 @@ print('Задача 8. НОД')
 
 
 def nod(a, b):
+    while a != 0 and b != 0:
+        if a > b:
+            a = a % b
+        elif b > a:
+            b = b % a
     if a == 0 and b == 0:
         print('НОДа нет, оба числа не могут быть равными нулю одновременно')
     elif a == 0 or b == 0:
         print('Нод равно: ', abs(a) + abs(b))
-    elif a > b:
-        print('Нод равно ', a % b)
-    elif b > a:
-        print('Нод равно ', b % a)
 
 
 a = int(input('Первое число: '))
